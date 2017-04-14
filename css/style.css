@@ -1,0 +1,86 @@
+
+* {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+    color: white;
+}
+
+text {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#main {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	font: 14px Helvetica Neue;
+  color: white;
+}
+h1 {
+	font-size: 36px;
+	font-weight: 300;
+}
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+}
+#chart path {
+	-webkit-transition-property: fill;
+	-webkit-transition-duration: 0.2s;
+}
+svg text {
+	font-family: helvetica, sans-serif;
+	fill: #fff;
+}
+#status {
+	cursor: pointer;
+	text-anchor: middle;
+}
+#status g.first text.time {
+	font-size: 14px;
+}
+#status g.first text.value {
+	font-size: 44px;
+	font-weight: bold;
+}
+#status g.first text.units {
+	font-size: 12px;
+  color: white;
+}
+#status g.second text.time, #status g.third text.time {
+	font-size: 12px;
+}
+#status g.second text.value, #status g.third text.value {
+	font-size: 30px;
+	fill: #fff;
+  color: white;
+}
+#status g.second text.units, #status g.third text.units {
+	font-size: 10px;
+}
+svg text.day.label {
+	font-size: 16px;
+	font-weight: bold;
+	fill: #bbb;
+	pointer-events: none;
+}
+svg text.time.label {
+	font-size: 12px;
+	font-weight: bold;
+	fill: #bbb;
+	pointer-events: none;
+}
+.week_step {
+	font-size: 80px;
+	fill: #fff;
+	font-weight: bold;
+	font-family: helvetica, sans-serif;
+	cursor: pointer;
+}
+#d3-info {
+	display: none;
+}

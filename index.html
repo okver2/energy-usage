@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Energy use</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="main">
+  <div id="d3-info">
+    <p><strong>Interactive data visualization for the web using D3</strong></p>
+    <p>Fundamentally, d3.js facilitates generation and manipulation of web documents with data. It does this by:</p>
+    <ul>
+      <li>Loading data into the browser’s memory</li>
+      <li>Binding data to elements within the document, creating new elements as needed</li>
+      <li>Transforming those elements by interpreting each element’s bound datum and setting its visual properties accordingly</li>
+      <li>Transitioning elements between states in response to user input</li>
+    </ul>
+    <p>Learning to use D3 is simply a process of learning the syntax used to tell it how you want it to load and bind data, and transform and transition elements.
+      D3 code is executed on the client side (meaning, in the user’s web browser, as opposed to on the web server). The purpose of visualization is to communicate the data.
+      In 2011, D3, the next evolution in web visualization tools was introduced. D3 operates directly on the web document itself.</p>
+  </div>
+  <h1>Visualization of domestic energy consumption</h1>
+  <p>Energy data taken from <a href="http://www.currentcost.com/product-cc128.html" target="_blank">Current Cost CC128</a></p>
+  <p>A week is shown at a time, use the + and - buttons to step through the weeks.</p>
+  <p>Each day is represented by a ring, subdivided into 24 hourly segments. Each segment is shaded according to the electricity consumed in that hour.</p>
+  <p>Hover over any segment and the central display shows the electricity consumed in that day and hour.</p>
+  <p>Click the central display to cycle between 1) units consumed, 2) monetary cost and 3) CO2 emitted.</p>
+  <svg width="600" height="600">
+  <g id="status">
+    <g class="first">
+      <text class="time" x="300" y="237"></text>
+      <text class="value" x="300" y="276"></text>
+      <text class="units" x="300" y="290"></text>
+    </g>
+    <g class="second">
+      <text class="time" x="255" y="320"></text>
+      <text class="value" x="255" y="347"></text>
+      <text class="units" x="255" y="360"></text>
+    </g>
+    <g class="third">
+      <text class="time" x="345" y="320">Year</text>
+      <text class="value" x="345" y="347"></text>
+      <text class="units" x="345" y="360"></text>
+    </g>
+  </g>
+  <text class="week_step" id="downweek" x="70" y="570">-</text>
+  <text class="week_step" id="upweek" x="500" y="570">+</text>
+  </svg>
+  
+</div>
+<script type="text/javascript" src="js/energy.js"></script> 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+<script>
+    $("a#more-info").click(function () {
+      $("#d3-info").slideToggle('slow');
+    });
+</script>
+</body>
+</html>
